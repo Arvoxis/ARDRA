@@ -1,0 +1,478 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARDRA | Drones Decoded – Ideathon 2026</title>
+    <meta name="description" content="ARDRA presents Drones Decoded – an ideathon exploring drone-powered solutions for environmental monitoring and anti-poaching surveillance.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Particle canvas -->
+    <canvas id="particles"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">⬡</span>
+                <span class="logo-text">ARDRA</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#problems">Challenges</a></li>
+                <li><a href="#timeline">Event</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                IDEATHON 2026
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">DRONES</span>
+                <span class="title-line accent">DECODED</span>
+            </h1>
+            <p class="hero-subtitle">Where Innovation Takes Flight</p>
+            <p class="hero-description">
+                Join <strong>Team ARDRA</strong> for an electrifying ideathon exploring the future of 
+                drone technology — from environmental guardianship to wildlife protection.
+            </p>
+            <div class="hero-actions">
+                <a href="#problems" class="btn btn-primary">
+                    <span>Explore Challenges</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#about" class="btn btn-outline">Learn More</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">2</span>
+                    <span class="stat-label">Problem Statements</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">1</span>
+                    <span class="stat-label">Day Event</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">∞</span>
+                    <span class="stat-label">Possibilities</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-drone-visual">
+            <div class="drone-container">
+                <div class="drone">
+                    <div class="drone-body"></div>
+                    <div class="drone-arm arm-tl">
+                        <div class="propeller"><div class="blade"></div><div class="blade"></div></div>
+                    </div>
+                    <div class="drone-arm arm-tr">
+                        <div class="propeller"><div class="blade"></div><div class="blade"></div></div>
+                    </div>
+                    <div class="drone-arm arm-bl">
+                        <div class="propeller"><div class="blade"></div><div class="blade"></div></div>
+                    </div>
+                    <div class="drone-arm arm-br">
+                        <div class="propeller"><div class="blade"></div><div class="blade"></div></div>
+                    </div>
+                    <div class="drone-camera"></div>
+                    <div class="drone-light"></div>
+                </div>
+                <div class="drone-shadow"></div>
+            </div>
+            <div class="scan-lines">
+                <div class="scan-line"></div>
+                <div class="scan-line"></div>
+                <div class="scan-line"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-dot"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">// WHO WE ARE</span>
+                <h2 class="section-title">About <span class="accent">ARDRA</span></h2>
+                <p class="section-subtitle">
+                    We are a passionate drone technology team pushing the boundaries of what's possible 
+                    with unmanned aerial systems. ARDRA brings together innovators united by a common 
+                    vision: leveraging drone technology for a better world.
+                </p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3>Real-Time Intelligence</h3>
+                    <p>Harnessing drone-collected data for instant environmental insights and rapid response.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Advanced Systems</h3>
+                    <p>Designing next-gen drone architectures with AI, computer vision, and sustainable materials.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <h3>Collaborative Innovation</h3>
+                    <p>Bringing together diverse minds to decode drone challenges through collective intelligence.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>Conservation Focus</h3>
+                    <p>Every solution we build aims to protect ecosystems, wildlife, and natural resources.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statements Section -->
+    <section id="problems">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">// THE CHALLENGES</span>
+                <h2 class="section-title">Problem <span class="accent">Statements</span></h2>
+                <p class="section-subtitle">
+                    Two real-world challenges that push the boundaries of drone technology. 
+                    Choose your mission and decode the solution.
+                </p>
+            </div>
+
+            <!-- Problem Statement 1 -->
+            <div class="problem-card" id="ps1">
+                <div class="problem-header">
+                    <div class="problem-number">
+                        <span>01</span>
+                    </div>
+                    <div class="problem-meta">
+                        <span class="problem-tag">Environmental Intelligence</span>
+                        <h3 class="problem-title">Smart Environmental Monitoring with Drones</h3>
+                    </div>
+                    <button class="problem-expand" aria-label="Expand problem statement">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="problem-body">
+                    <div class="problem-context">
+                        <h4>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                            The Problem
+                        </h4>
+                        <p>
+                            Environmental degradation is accelerating across forests, water bodies, and agricultural regions. 
+                            Illegal deforestation, water contamination, crop stress, and biodiversity loss often go undetected 
+                            until significant damage has already occurred. Traditional monitoring relies on manual inspection, 
+                            satellite imagery, or delayed reporting — methods that are expensive, infrequent, and low-resolution. 
+                            Drone technology unlocks the potential for real-time, high-resolution monitoring systems that detect 
+                            threats early and enable rapid intervention.
+                        </p>
+                    </div>
+
+                    <div class="problem-scenario">
+                        <h4>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            The Scenario
+                        </h4>
+                        <p>
+                            A vast forest reserve, agricultural region, or watershed demands constant surveillance. 
+                            Threats range from illegal logging and crop disease to water pollution and land misuse. 
+                            Ground teams alone cannot cover such enormous areas — aerial monitoring can bridge the gap, 
+                            but the real challenge lies in transforming raw drone data into actionable environmental intelligence.
+                        </p>
+                    </div>
+
+                    <div class="problem-challenge">
+                        <h4>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            Your Mission
+                        </h4>
+                        <p>
+                            Design a drone-enabled environmental monitoring system that detects and tracks 
+                            sustainability threats across large geographic areas — providing actionable insights 
+                            to both authorities and communities.
+                        </p>
+                    </div>
+
+                    <div class="problem-requirements">
+                        <h4>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                            Core Challenges & Deliverables
+                        </h4>
+                        <div class="requirements-grid">
+                            <div class="requirement">
+                                <span class="req-icon">🛰️</span>
+                                <span>Efficient aerial coverage of large areas</span>
+                            </div>
+                            <div class="requirement">
+                                <span class="req-icon">📊</span>
+                                <span>Processing and analyzing environmental data</span>
+                            </div>
+                            <div class="requirement">
+                                <span class="req-icon">⚠️</span>
+                                <span>Early detection of ecological threats</span>
+                            </div>
+                            <div class="requirement">
+                                <span class="req-icon">📈</span>
+                                <span>Scalable and practical deployment strategies</span>
+                            </div>
+                            <div class="requirement">
+                                <span class="req-icon">🤖</span>
+                                <span>AI / Computer Vision for data analysis</span>
+                            </div>
+                            <div class="requirement">
+                                <span class="req-icon">🔋</span>
+                                <span>Energy-efficient, economically viable operation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="problem-constraints">
+                        <h4>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                            System Constraints
+                        </h4>
+                        <ul>
+                            <li>Economically viable and scalable</li>
+                            <li>Minimal human intervention required</li>
+                            <li>Energy-efficient drone operation</li>
+                            <li>Minimal disturbance to wildlife and ecosystems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Problem Statement 2 -->
+            <div class="problem-card" id="ps2">
+                <div class="problem-header">
+                    <div class="problem-number">
+                        <span>02</span>
+                    </div>
+                    <div class="problem-meta">
+                        <span class="problem-tag">Wildlife Protection & Sustainable Design</span>
+                        <h3 class="problem-title">Anti-Poaching Surveillance & Sustainable Drone Design</h3>
+                    </div>
+                    <button class="problem-expand" aria-label="Expand problem statement">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="problem-body">
+                    <div class="problem-context">
+                        <h4>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                            The Problem
+                        </h4>
+                        <p>
+                            Illegal wildlife poaching continues to devastate biodiversity across protected forests, 
+                            particularly in developing conservation landscapes. Traditional patrolling is manpower-intensive, 
+                            slow, and ineffective over vast, inaccessible terrains. Poachers deploy advanced tools and 
+                            conduct night operations, making detection far more complex than ever before.
+                        </p>
+                        <p>
+                            Meanwhile, drones deployed in forest ecosystems face their own challenges — high wind speeds, 
+                            unpredictable turbulence above tree canopies, and signal interference. Crashes in remote areas leave 
+                            behind lithium-ion batteries, polymer frames, and electronic boards that pose contamination risks, 
+                            wildlife hazards, and fire dangers — meaning the very technology designed to protect nature can 
+                            inadvertently harm it.
+                        </p>
+                    </div>
+
+                    <div class="problem-challenge">
+                        <h4>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            Your Dual Mission
+                        </h4>
+                        <div class="dual-mission">
+                            <div class="mission-part">
+                                <span class="mission-label">Part A — Anti-Poaching Intelligence</span>
+                                <p>
+                                    Design an AI-powered, scalable drone ecosystem for real-time anti-poaching surveillance 
+                                    that detects suspicious activity day and night, predicts high-risk poaching zones, 
+                                    operates autonomously over large forest areas, and enables rapid ground-team coordination.
+                                </p>
+                            </div>
+                            <div class="mission-part">
+                                <span class="mission-label">Part B — Sustainable Drone Engineering</span>
+                                <p>
+                                    Develop a wind-resilient and environmentally sustainable drone system that maintains 
+                                    flight stability in turbulent conditions, minimizes crash probability, enables 
+                                    autonomous self-location for retrieval, and uses biodegradable or low-impact materials 
+                                    with safe battery containment.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="problem-requirements">
+                        <h4>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                            Key Capabilities Required
+                        </h4>
+                        <div class="requirements-grid">
+                            <div class="requirement">
+                                <span class="req-icon">🌙</span>
+                                <span>Real-time detection of human activity (day & night)</span>
+                            </div>
+                            <div class="requirement">
+                                <span class="req-icon">📍</span>
+                                <span>Predictive analytics for high-risk poaching zones</span>
+                            </div>
+                            <div class="requirement">
+                                <span class="req-icon">💨</span>
+                                <span>Wind-resilient flight stability systems</span>
+                            </div>
+                            <div class="requirement">
+                                <span class="req-icon">♻️</span>
+                                <span>Biodegradable / recyclable drone materials</span>
+                            </div>
+                            <div class="requirement">
+                                <span class="req-icon">🔔</span>
+                                <span>Rapid alerting & ground patrol coordination</span>
+                            </div>
+                            <div class="requirement">
+                                <span class="req-icon">📡</span>
+                                <span>Autonomous self-location for crash retrieval</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="problem-constraints">
+                        <h4>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                            Design Constraints
+                        </h4>
+                        <ul>
+                            <li>Cost-effective for state forest departments</li>
+                            <li>Minimal human intervention for autonomous operations</li>
+                            <li>Safe battery containment and eco-friendly disposal</li>
+                            <li>Adaptive control systems for turbulent conditions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Timeline Section -->
+    <section id="timeline">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">// THE EVENT</span>
+                <h2 class="section-title">Drones <span class="accent">Decoded</span></h2>
+                <p class="section-subtitle">
+                    A one-day ideathon powered by Team ARDRA. 
+                    Bring your ideas, push your limits, and decode the future of drone technology.
+                </p>
+            </div>
+            <div class="event-info-grid">
+                <div class="event-card">
+                    <div class="event-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                    </div>
+                    <h3>Date</h3>
+                    <p>March 6, 2026</p>
+                </div>
+                <div class="event-card">
+                    <div class="event-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Venue</h3>
+                    <p>To be announced</p>
+                </div>
+                <div class="event-card">
+                    <div class="event-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Format</h3>
+                    <p>Team-based Ideathon</p>
+                </div>
+                <div class="event-card">
+                    <div class="event-card-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                    </div>
+                    <h3>Theme</h3>
+                    <p>Drone Technology</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Footer Section -->
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="logo-icon">⬡</span>
+                    <span class="logo-text">ARDRA</span>
+                    <p class="footer-tagline">Decoding the future of drones, one idea at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#hero">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#problems">Challenges</a>
+                    <a href="#timeline">Event</a>
+                </div>
+                <div class="footer-cta">
+                    <h4>Ready to Innovate?</h4>
+                    <p>Pick a problem statement, form your team, and bring your best ideas to Drones Decoded.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Team ARDRA — Drones Decoded Ideathon</p>
+                <p class="footer-credits">Crafted with ✈️ by ARDRA</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
